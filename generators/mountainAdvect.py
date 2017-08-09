@@ -37,7 +37,7 @@ class MountainAdvect:
                 meshSlantedCell500_6000m, meshSlantedCell333_6000m, meshSlantedCell250_6000m
         ]
 
-        mountainAdvect = MountainAdvectBuilder(parallel, fast, fastMesh=advect.meshNoOrography1000)
+        mountainAdvect = MountainAdvectBuilder(parallel, fast, fastMesh=advect.meshNoOrography5000)
 
         # l2ByMountainHeight
 
