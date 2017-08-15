@@ -16,3 +16,7 @@ aws s3 cp --recursive ${s3uri}schaerAdvect-btf-linearUpwind-collated build/schae
 aws s3 cp --recursive ${s3uri}schaerAdvect-cutCell-linearUpwind-collated build/schaerAdvect-cutCell-linearUpwind-collated
 aws s3 cp --recursive ${s3uri}schaerAdvect-btf-cubicFit-collated build/schaerAdvect-btf-cubicFit-collated
 aws s3 cp --recursive ${s3uri}schaerAdvect-cutCell-cubicFit-collated build/schaerAdvect-cutCell-cubicFit-collated
+aws s3 cp --recursive ${s3uri}tfAdvect-btf-linearUpwind-collated build/tfAdvect-btf-linearUpwind-collated
+aws s3 cp --recursive ${s3uri}tfAdvect-cutCell-linearUpwind-collated build/tfAdvect-cutCell-linearUpwind-collated
+aws s3 cp --recursive ${s3uri}tfAdvect-btf-cubicFit-collated build/tfAdvect-btf-cubicFit-collated
+aws s3 cp --recursive ${s3uri}tfAdvect-cutCell-cubicFit-collated build/tfAdvect-cutCell-cubicFit-collated
