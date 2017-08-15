@@ -40,34 +40,64 @@ class TerrainFollowingAdvect:
                     SchaerAdvectCollated.Test('tfAdvect-btf-250-cubicFit',  250,      advect.meshBtf250_6000m,  timestep=8)
         ])
 
+#        self.cutCellLinearUpwindCollated = tfAdvect.collated(
+#                'tfAdvect-cutCell-linearUpwind-collated',
+#                fvSchemes=os.path.join('src/schaerAdvect/linearUpwind'),
+#                tests=[
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-5000-linearUpwind', 5000,     advect.meshCutCell5000_6000m, timestep=50),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2500-linearUpwind', 2500,     advect.meshCutCell2500_6000m, timestep=5),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2000-linearUpwind', 2000,     advect.meshCutCell2000_6000m, timestep=2),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1250-linearUpwind', 1250,     advect.meshCutCell1250_6000m, timestep=0.8),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1000-linearUpwind', 1000,     advect.meshCutCell1000_6000m, timestep=2),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-667-linearUpwind',  1000/3*2, advect.meshCutCell667_6000m,  timestep=0.125),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-500-linearUpwind',  500,      advect.meshCutCell500_6000m,  timestep=0.125),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-333-linearUpwind',  1000/3,   advect.meshCutCell333_6000m,  timestep=0.05),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-250-linearUpwind',  250,      advect.meshCutCell250_6000m,  timestep=0.05)
+#        ])
+#
+#        self.cutCellCubicFitCollated = tfAdvect.collated(
+#                'tfAdvect-cutCell-cubicFit-collated',
+#                fvSchemes=os.path.join('src/schaerAdvect/cubicFit'),
+#                tests=[
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-5000-cubicFit', 5000,     advect.meshCutCell5000_6000m, timestep=50),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2500-cubicFit', 2500,     advect.meshCutCell2500_6000m, timestep=5),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2000-cubicFit', 2000,     advect.meshCutCell2000_6000m, timestep=2),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1250-cubicFit', 1250,     advect.meshCutCell1250_6000m, timestep=0.8),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1000-cubicFit', 1000,     advect.meshCutCell1000_6000m, timestep=2),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-667-cubicFit',  1000/3*2, advect.meshCutCell667_6000m,  timestep=0.125),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-500-cubicFit',  500,      advect.meshCutCell500_6000m,  timestep=0.125),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-333-cubicFit',  1000/3,   advect.meshCutCell333_6000m,  timestep=0.05),
+#                    SchaerAdvectCollated.Test('tfAdvect-cutCell-250-cubicFit',  250,      advect.meshCutCell250_6000m,  timestep=0.05)
+#        ])
+
         self.cutCellLinearUpwindCollated = tfAdvect.collated(
                 'tfAdvect-cutCell-linearUpwind-collated',
                 fvSchemes=os.path.join('src/schaerAdvect/linearUpwind'),
                 tests=[
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-5000-linearUpwind', 5000,     advect.meshCutCell5000_6000m, timestep=50),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2500-linearUpwind', 2500,     advect.meshCutCell2500_6000m, timestep=5),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2000-linearUpwind', 2000,     advect.meshCutCell2000_6000m, timestep=2),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1250-linearUpwind', 1250,     advect.meshCutCell1250_6000m, timestep=0.8),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1000-linearUpwind', 1000,     advect.meshCutCell1000_6000m, timestep=2),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-667-linearUpwind',  1000/3*2, advect.meshCutCell667_6000m,  timestep=0.125),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-500-linearUpwind',  500,      advect.meshCutCell500_6000m,  timestep=0.125),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-333-linearUpwind',  1000/3,   advect.meshCutCell333_6000m,  timestep=0.05),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-250-linearUpwind',  250,      advect.meshCutCell250_6000m,  timestep=0.05)
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-5000-linearUpwind', 5000,     advect.meshNoOrography5000, timestep=50),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2500-linearUpwind', 2500,     advect.meshNoOrography2500, timestep=25),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2000-linearUpwind', 2000,     advect.meshNoOrography2000, timestep=20),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1250-linearUpwind', 1250,     advect.meshNoOrography1250, timestep=10),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1000-linearUpwind', 1000,     advect.meshNoOrography1000, timestep=8),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-667-linearUpwind',  1000/3*2, advect.meshNoOrography667,  timestep=5),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-500-linearUpwind',  500,      advect.meshNoOrography500,  timestep=4),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-333-linearUpwind',  1000/3,   advect.meshNoOrography333,  timestep=2.5),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-250-linearUpwind',  250,      advect.meshNoOrography250,  timestep=2)
         ])
 
         self.cutCellCubicFitCollated = tfAdvect.collated(
                 'tfAdvect-cutCell-cubicFit-collated',
                 fvSchemes=os.path.join('src/schaerAdvect/cubicFit'),
                 tests=[
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-5000-cubicFit', 5000,     advect.meshCutCell5000_6000m, timestep=50),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2500-cubicFit', 2500,     advect.meshCutCell2500_6000m, timestep=5),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2000-cubicFit', 2000,     advect.meshCutCell2000_6000m, timestep=2),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1250-cubicFit', 1250,     advect.meshCutCell1250_6000m, timestep=0.8),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1000-cubicFit', 1000,     advect.meshCutCell1000_6000m, timestep=2),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-667-cubicFit',  1000/3*2, advect.meshCutCell667_6000m,  timestep=0.125),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-500-cubicFit',  500,      advect.meshCutCell500_6000m,  timestep=0.125),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-333-cubicFit',  1000/3,   advect.meshCutCell333_6000m,  timestep=0.05),
-                    SchaerAdvectCollated.Test('tfAdvect-cutCell-250-cubicFit',  250,      advect.meshCutCell250_6000m,  timestep=0.05)
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-5000-cubicFit', 5000,     advect.meshNoOrography5000, timestep=50),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2500-cubicFit', 2500,     advect.meshNoOrography2500, timestep=25),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-2000-cubicFit', 2000,     advect.meshNoOrography2000, timestep=20),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1250-cubicFit', 1250,     advect.meshNoOrography1250, timestep=10),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-1000-cubicFit', 1000,     advect.meshNoOrography1000, timestep=8),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-667-cubicFit',  1000/3*2, advect.meshNoOrography667,  timestep=5),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-500-cubicFit',  500,      advect.meshNoOrography500,  timestep=4),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-333-cubicFit',  1000/3,   advect.meshNoOrography333,  timestep=2.5),
+                    SchaerAdvectCollated.Test('tfAdvect-cutCell-250-cubicFit',  250,      advect.meshNoOrography250,  timestep=2)
         ])
 
     def addTo(self, build):
