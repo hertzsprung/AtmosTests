@@ -2,7 +2,7 @@
 set -e
 
 ninja build/{schaer,tf}Advect-{btf,cutCell}-1000-{linearUpwind,cubicFit}/10000/l{2,inf}errorT.txt
-ninja build/schaerAdvect-{btf,cutCell}-1000-linearUpwind/dt.txt
+ninja build/{schaer,tf}Advect-{btf,cutCell}-1000-linearUpwind/dt.txt
 ninja build/{schaer,tf}Advect-{btf,cutCell}-{linearUpwind,cubicFit}-collated/10000/l{2,inf}errorT.txt
 ninja build/deformationSphere-mesh-hex-{4,8,9}/averageEquatorialSpacing.txt
 ninja build/deformationSphere-gaussians-hex-8-cubicFit/{0,518400,1036800}/T
