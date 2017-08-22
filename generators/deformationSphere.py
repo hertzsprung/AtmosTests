@@ -3,7 +3,7 @@ import os
 
 class DeformationSphere:
     def __init__(self, parallel, fast):
-        meshHex4 = GeodesicHexMesh('deformationSphere-mesh-hex-4', 4, fast, maxTasks=4)
+        meshHex4 = GeodesicHexMesh('deformationSphere-mesh-hex-4', 4, fast)
         meshHex5 = GeodesicHexMesh('deformationSphere-mesh-hex-5', 5, fast)
         meshHex6 = GeodesicHexMesh('deformationSphere-mesh-hex-6', 6, fast)
         meshHex7 = GeodesicHexMesh('deformationSphere-mesh-hex-7', 7, fast)
