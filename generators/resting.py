@@ -1,6 +1,5 @@
 from ninjaopenfoam import BlockMesh, CutCellMesh, RestingBuilder, RestingCollated, \
         SlantedCellMesh, TerrainFollowingMesh
-import ninjaopenfoam as ninja
 
 import os
 

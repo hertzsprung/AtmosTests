@@ -22,6 +22,7 @@ class AtmosTests:
             'generators/mountainAdvect.py',
             'generators/resting.py',
             'generators/schaerAdvect.py',
+            'generators/schaerWaves.py',
             'generators/solvers.py',
             'generators/tfAdvect.py'
         ])
@@ -35,6 +36,7 @@ class AtmosTests:
         generators.DeformationSphere(self.parallel, self.fast).addTo(self.build)
         generators.MountainAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.Resting(self.parallel, self.fast).addTo(self.build)
+        generators.SchaerWaves(self.parallel, self.fast).addTo(self.build)
 
     def write(self):
         self.build.write()
