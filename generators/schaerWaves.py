@@ -1,5 +1,7 @@
 from ninjaopenfoam import BlockMesh, TerrainFollowingMesh
 
+import ninjaopenfoam as ninja
+
 import os
 
 class SchaerWaves:
@@ -13,5 +15,8 @@ class SchaerWaves:
                 meshBtf300dz
         ]
 
+        self.btfLinearUpwind300dz = ninja.SchaerWaves('schaerWaves-btf-300dz-linearUpwind', meshBtf300dz, 8.0, os.path.join('src/schaerWaves/linearUpwind'), parallel, fast)
+
     def addTo(self, build):
         build.addAll(self.meshes)
+        build.add(self.btfLinearUpwind300dz)
