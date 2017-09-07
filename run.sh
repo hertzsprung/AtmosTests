@@ -16,3 +16,4 @@ ninja $@ build/mountainAdvect-maxdt-{btf,cutCell,slantedCell}-6000m-cubicFit-col
 ninja $@ build/mountainAdvect-h0-slantedCell-1000-6000m-linearUpwind/co.txt
 ninja $@ build/mountainAdvect-h0-{btf,cutCell,slantedCell}-1000-5000m-linearUpwind/10000/{T,T_analytic,T_diff}
 ninja $@ build/resting-{btf,sleve,cutCell,slantedCell}-{linearUpwind,cubicFit}-collated/maxw.txt
+ninja $@ build/schaerWaves-btf-300dz-linearUpwind/18000/Uf
