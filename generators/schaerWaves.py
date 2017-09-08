@@ -19,7 +19,9 @@ class SchaerWaves:
         ]
 
         self.btfLinearUpwind300dz = ninja.SchaerWaves('schaerWaves-btf-300dz-linearUpwind', meshBtf300dz, 8.0, os.path.join('src/schaerWaves/linearUpwind'), parallel, fast, meshBtfFast)
+        self.btfCubicFit300dz = ninja.SchaerWaves('schaerWaves-btf-300dz-cubicFit', meshBtf300dz, 8.0, os.path.join('src/schaerWaves/cubicFit'), parallel, fast, meshBtfFast)
 
     def addTo(self, build):
         build.addAll(self.meshes)
         build.add(self.btfLinearUpwind300dz)
+        build.add(self.btfCubicFit300dz)
