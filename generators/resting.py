@@ -57,9 +57,6 @@ class Resting:
                     RestingCollated.Test('resting-btf-1000m-linearUpwind', 1000, meshBtf1000m, timestep=25),
                     RestingCollated.Test('resting-btf-2000m-linearUpwind', 2000, meshBtf2000m, timestep=25),
                     RestingCollated.Test('resting-btf-3000m-linearUpwind', 3000, meshBtf3000m, timestep=25),
-                    RestingCollated.Test('resting-btf-4000m-linearUpwind', 4000, meshBtf4000m, timestep=25),
-                    RestingCollated.Test('resting-btf-5000m-linearUpwind', 5000, meshBtf5000m, timestep=25),
-                    RestingCollated.Test('resting-btf-6000m-linearUpwind', 6000, meshBtf6000m, timestep=25)
         ])
 
         self.btfCubicFit = resting.collateByMountainHeight(
@@ -68,11 +65,7 @@ class Resting:
                 tests=[
                     RestingCollated.Test('resting-btf-0m-cubicFit', 0, meshNoOrography, timestep=25),
                     RestingCollated.Test('resting-btf-1000m-cubicFit', 1000, meshBtf1000m, timestep=25),
-                    RestingCollated.Test('resting-btf-2000m-cubicFit', 2000, meshBtf2000m, timestep=25),
-                    RestingCollated.Test('resting-btf-3000m-cubicFit', 3000, meshBtf3000m, timestep=25),
-                    RestingCollated.Test('resting-btf-4000m-cubicFit', 4000, meshBtf4000m, timestep=25),
-                    RestingCollated.Test('resting-btf-5000m-cubicFit', 5000, meshBtf5000m, timestep=25),
-                    RestingCollated.Test('resting-btf-6000m-cubicFit', 6000, meshBtf6000m, timestep=25)
+                    RestingCollated.Test('resting-btf-2000m-cubicFit', 2000, meshBtf2000m, timestep=25)
         ])
 
         self.sleveLinearUpwind = resting.collateByMountainHeight(
