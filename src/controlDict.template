@@ -18,4 +18,4 @@ writePrecision      12;
 writeCompression    uncompressed;
 timeFormat          fixed;
 timePrecision       0;
-libs                ("liborography.so" "libthermalFields.so");
+libs                ("libprescribedFields.so" "liborography.so" "libthermalFields.so");
