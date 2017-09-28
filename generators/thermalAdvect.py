@@ -1,4 +1,4 @@
-from ninjaopenfoam import Advect, Timing
+import ninjaopenfoam as ninja
 
 import os
 
@@ -10,12 +10,7 @@ class ThermalAdvect:
         cubicFit = os.path.join('src/schaerAdvect/cubicFit')
         T_init = os.path.join('src/schaerWaves/theta_init')
 
-        self.btf300dzLinearUpwind = Advect('thermalAdvect-btf-300dz-linearUpwind', 0, 250, meshes.btf300dz, tracerField, velocityField, T_init, Timing(18000, 3600, 8), linearUpwind, parallel, fast)
-        self.btf300dzCubicFit = Advect('thermalAdvect-btf-300dz-cubicFit', 0, 250, meshes.btf300dz, tracerField, velocityField, T_init, Timing(18000, 3600, 8), cubicFit, parallel, fast)
-
-        self.btf150dzLinearUpwind = Advect('thermalAdvect-btf-150dz-linearUpwind', 0, 125, meshes.btf150dz, tracerField, velocityField, T_init, Timing(18000, 3600, 8), linearUpwind, parallel, fast)
+        self.btf300dzLinearUpwind = ninja.ThermalAdvect('thermalAdvect-btf-300dz-linearUpwind', 0, meshes.btf300dz, 8, linearUpwind, parallel, fast, meshes.btfFast)
 
     def addTo(self, build):
         build.add(self.btf300dzLinearUpwind)
-        build.add(self.btf300dzCubicFit)
-        build.add(self.btf150dzLinearUpwind)
