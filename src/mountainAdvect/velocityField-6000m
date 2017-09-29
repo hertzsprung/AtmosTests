@@ -9,6 +9,7 @@ FoamFile {
 type			btf;
 speed			10;
 domainHeight		10e3;
+analyticSolution	horizontalOnly;
 
 mountain
 {
