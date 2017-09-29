@@ -1,4 +1,4 @@
-from ninjaopenfoam import BlockMesh, TerrainFollowingMesh
+from ninjaopenfoam import BlockMesh, CutCellMesh, TerrainFollowingMesh
 
 import os
 
@@ -27,11 +27,24 @@ class SchaerWavesMeshes:
         self.btf75dz = TerrainFollowingMesh('schaerWaves-mesh-btf-75dz', noOrography75dz, btfDict)
         self.btf50dz = TerrainFollowingMesh('schaerWaves-mesh-btf-50dz', noOrography50dz, btfDict)
 
+        createPatchDict = os.path.join('src/schaerWaves/createPatchDict')
+        self.cutCell500dz = CutCellMesh('schaerWaves-mesh-cutCell-500dz', os.path.join('src/schaerWaves/mesh-cutCell-500dz'), createPatchDict)
+        self.cutCell300dz = CutCellMesh('schaerWaves-mesh-cutCell-300dz', os.path.join('src/schaerWaves/mesh-cutCell-300dz'), createPatchDict)
+        self.cutCell250dz = CutCellMesh('schaerWaves-mesh-cutCell-250dz', os.path.join('src/schaerWaves/mesh-cutCell-250dz'), createPatchDict)
+        self.cutCell200dz = CutCellMesh('schaerWaves-mesh-cutCell-200dz', os.path.join('src/schaerWaves/mesh-cutCell-200dz'), createPatchDict)
+        self.cutCell150dz = CutCellMesh('schaerWaves-mesh-cutCell-150dz', os.path.join('src/schaerWaves/mesh-cutCell-150dz'), createPatchDict)
+        self.cutCell125dz = CutCellMesh('schaerWaves-mesh-cutCell-125dz', os.path.join('src/schaerWaves/mesh-cutCell-125dz'), createPatchDict)
+        self.cutCell100dz = CutCellMesh('schaerWaves-mesh-cutCell-100dz', os.path.join('src/schaerWaves/mesh-cutCell-100dz'), createPatchDict)
+        self.cutCell75dz = CutCellMesh('schaerWaves-mesh-cutCell-75dz', os.path.join('src/schaerWaves/mesh-cutCell-75dz'), createPatchDict)
+        self.cutCell50dz = CutCellMesh('schaerWaves-mesh-cutCell-50dz', os.path.join('src/schaerWaves/mesh-cutCell-50dz'), createPatchDict)
+
         self.meshes = [
                 noOrographyFast, noOrography500dz, noOrography300dz, noOrography250dz, noOrography200dz,
                 noOrography150dz, noOrography125dz, noOrography100dz, noOrography75dz, noOrography50dz,
                 self.btfFast, self.btf500dz, self.btf300dz, self.btf250dz, self.btf200dz, self.btf150dz, 
-                self.btf125dz, self.btf100dz, self.btf75dz, self.btf50dz
+                self.btf125dz, self.btf100dz, self.btf75dz, self.btf50dz,
+                self.cutCell500dz, self.cutCell300dz, self.cutCell250dz, self.cutCell200dz, self.cutCell150dz,
+                self.cutCell125dz, self.cutCell100dz, self.cutCell75dz, self.cutCell50dz
         ]
 
     def addTo(self, build):
