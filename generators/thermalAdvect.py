@@ -29,6 +29,16 @@ class ThermalAdvect:
         self.cutCell75dzCubicFit = ninja.ThermalAdvect('thermalAdvect-cutCell-75dz-cubicFit', 125, meshes.cutCell75dz, 2.0, cubicFit, parallel, fast, meshes.btfFast)
         self.cutCell50dzCubicFit = ninja.ThermalAdvect('thermalAdvect-cutCell-50dz-cubicFit', 83.33333, meshes.cutCell50dz, 1.333333333, cubicFit, parallel, fast, meshes.btfFast)
 
+        self.slantedCell500dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-500dz-cubicFit', 833.33333, meshes.slantedCell500dz, 13.33333333, cubicFit, parallel, fast, meshes.btfFast)
+        self.slantedCell300dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-300dz-cubicFit', 500, meshes.slantedCell300dz, 8.0, cubicFit, parallel, fast, meshes.btfFast)
+        self.slantedCell250dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-250dz-cubicFit', 416.66667, meshes.slantedCell250dz, 6.66666666, cubicFit, parallel, fast, meshes.btfFast)
+        self.slantedCell200dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-200dz-cubicFit', 333.33333, meshes.slantedCell200dz, 5.333333333, cubicFit, parallel, fast, meshes.btfFast)
+        self.slantedCell150dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-150dz-cubicFit', 250, meshes.slantedCell150dz, 4.0, cubicFit, parallel, fast, meshes.btfFast)
+        self.slantedCell125dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-125dz-cubicFit', 208.33333, meshes.slantedCell125dz, 3.333333333, cubicFit, parallel, fast, meshes.btfFast)
+        self.slantedCell100dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-100dz-cubicFit', 166.66667, meshes.slantedCell100dz, 2.666666667, cubicFit, parallel, fast, meshes.btfFast)
+        self.slantedCell75dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-75dz-cubicFit', 125, meshes.slantedCell75dz, 2.0, cubicFit, parallel, fast, meshes.btfFast)
+        self.slantedCell50dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-50dz-cubicFit', 83.33333, meshes.slantedCell50dz, 1.333333333, cubicFit, parallel, fast, meshes.btfFast)
+
     def addTo(self, build):
         build.add(self.btf500dzCubicFit)
         build.add(self.btf300dzCubicFit)
@@ -49,3 +59,13 @@ class ThermalAdvect:
         build.add(self.cutCell100dzCubicFit)
         build.add(self.cutCell75dzCubicFit)
         build.add(self.cutCell50dzCubicFit)
+
+        build.add(self.slantedCell500dzCubicFit)
+        build.add(self.slantedCell300dzCubicFit)
+        build.add(self.slantedCell250dzCubicFit)
+        build.add(self.slantedCell200dzCubicFit)
+        build.add(self.slantedCell150dzCubicFit)
+        build.add(self.slantedCell125dzCubicFit)
+        build.add(self.slantedCell100dzCubicFit)
+        build.add(self.slantedCell75dzCubicFit)
+        build.add(self.slantedCell50dzCubicFit)

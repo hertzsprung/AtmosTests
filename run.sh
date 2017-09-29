@@ -18,4 +18,4 @@ ninja $@ build/mountainAdvect-h0-{btf,cutCell,slantedCell}-1000-5000m-linearUpwi
 ninja $@ build/resting-{btf,sleve,cutCell,slantedCell}-{linearUpwind,cubicFit}-collated/maxw.txt
 ninja $@ build/schaerWaves-btf-300dz-linearUpwind/18000/Uf
 ninja $@ build/schaerWaves-btf-50dz-cubicFit/18000/theta_diff
-ninja $@ build/thermalAdvect-{btf,cutCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/18000/T_diff.sampleLine.dat
+ninja $@ build/thermalAdvect-{btf,cutCell,slantedCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/18000/T_diff.sampleLine.dat
