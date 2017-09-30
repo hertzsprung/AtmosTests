@@ -10,4 +10,4 @@ type			stratifiedThermal;
 gravity			g  [0 1 -2 0 0 0 0] (0 0 -9.81);
 T0			T0 [0 0  0 1 0 0 0] 288;
 BruntVaisalaFrequencies 1(0.01);
-verticalLayers		2(0 30.0001e3);
+verticalLayers		2(-10 30.0001e3);
