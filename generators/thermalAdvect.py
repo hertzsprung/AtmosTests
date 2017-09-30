@@ -26,7 +26,7 @@ class ThermalAdvect:
         self.cutCell150dzCubicFit = ninja.ThermalAdvect('thermalAdvect-cutCell-150dz-cubicFit', 250, meshes.cutCell150dz, 0.5, cubicFit, parallel, fast, meshes.btfFast)
         self.cutCell125dzCubicFit = ninja.ThermalAdvect('thermalAdvect-cutCell-125dz-cubicFit', 208.33333, meshes.cutCell125dz, 3, cubicFit, parallel, fast, meshes.btfFast)
         self.cutCell100dzCubicFit = ninja.ThermalAdvect('thermalAdvect-cutCell-100dz-cubicFit', 166.66667, meshes.cutCell100dz, 0.2, cubicFit, parallel, fast, meshes.btfFast)
-        self.cutCell75dzCubicFit = ninja.ThermalAdvect('thermalAdvect-cutCell-75dz-cubicFit', 125, meshes.cutCell75dz, 1.0, cubicFit, parallel, fast, meshes.btfFast)
+        self.cutCell75dzCubicFit = ninja.ThermalAdvect('thermalAdvect-cutCell-75dz-cubicFit', 125, meshes.cutCell75dz, 0.8, cubicFit, parallel, fast, meshes.btfFast)
         self.cutCell50dzCubicFit = ninja.ThermalAdvect('thermalAdvect-cutCell-50dz-cubicFit', 83.33333, meshes.cutCell50dz, 0.25, cubicFit, parallel, fast, meshes.btfFast)
 
         self.slantedCell500dzCubicFit = ninja.ThermalAdvect('thermalAdvect-slantedCell-500dz-cubicFit', 833.33333, meshes.slantedCell500dz, 25, cubicFit, parallel, fast, meshes.btfFast)
