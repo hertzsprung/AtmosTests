@@ -26,4 +26,3 @@ set -e
 
 ./singularity.ninja.sh $@ build/thermalAdvect-{btf,cutCell,slantedCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/18000/T_diff.sampleLine.dat
 ./singularity.ninja.sh $@ build/thermalAdvect-{btf,cutCell,slantedCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/s3.uploaded
->>>>>>> 9d7fb6c03283ff74637851fdc488d161adcabec3
