@@ -56,7 +56,8 @@ class SchaerWavesMeshes:
                 self.cutCell500dz, self.cutCell300dz, self.cutCell250dz, self.cutCell200dz, self.cutCell150dz,
                 self.cutCell125dz, self.cutCell100dz, self.cutCell75dz, self.cutCell50dz,
                 self.slantedCell500dz, self.slantedCell300dz, self.slantedCell250dz, self.slantedCell200dz,
-                self.slantedCell125dz, self.slantedCell100dz, self.slantedCell75dz, self.slantedCell50dz
+                self.slantedCell150dz, self.slantedCell125dz, self.slantedCell100dz, self.slantedCell75dz,
+                self.slantedCell50dz
         ]
 
     def addTo(self, build):
