@@ -9,12 +9,12 @@ FoamFile {
 type			btf;
 speed			10;
 domainHeight		10e3;
-analyticSolution	horizontalOnly;
+analyticSolution	verticalOnly;
 
 mountain
 {
-	type		schaerCos;
-	halfWidth	25e3;
-	peakHeight	6e3;
-	wavelength	8e3;
+	type		schaerExp;
+	halfWidth	5e3;
+	peakHeight	250;
+	wavelength	4e3;
 }

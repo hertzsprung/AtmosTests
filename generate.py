@@ -24,19 +24,26 @@ class AtmosTests:
             'generators/schaerAdvect.py',
             'generators/schaerWaves.py',
             'generators/solvers.py',
-            'generators/tfAdvect.py'
+            'generators/tfAdvect.py',
+            'generators/thermalAdvect.py'
         ])
 
         generators.Solvers(self.parallel).addTo(self.build)
 
         advect = generators.Advect()
         advect.addTo(self.build)
+
         generators.SchaerAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.TerrainFollowingAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.DeformationSphere(self.parallel, self.fast).addTo(self.build)
         generators.MountainAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.Resting(self.parallel, self.fast).addTo(self.build)
-        generators.SchaerWaves(self.parallel, self.fast).addTo(self.build)
+
+        schaerWavesMeshes = generators.SchaerWavesMeshes()
+        schaerWavesMeshes.addTo(self.build) 
+
+        generators.SchaerWaves(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
+        generators.ThermalAdvect(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
 
     def write(self):
         self.build.write()
