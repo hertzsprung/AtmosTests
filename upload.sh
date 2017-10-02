@@ -20,6 +20,7 @@ set -e
 ./singularity.ninja.sh $@ build/mountainAdvect-h0-{btf,cutCell,slantedCell}-1000-{0,3000,4000,5000,6000}m-linearUpwind/s3.uploaded
 ./singularity.ninja.sh $@ build/mountainAdvect-maxdt-{btf,cutCell,slantedCell}-6000m-cubicFit-collated/s3.uploaded
 
+./singularity.ninja.sh $@ build/resting-{btf,sleve,cutCell,slantedCell}-1000m-cubicFit/s3.uploaded
 ./singularity.ninja.sh $@ build/resting-{btf,sleve,cutCell,slantedCell}-{linearUpwind,cubicFit}-collated/s3.uploaded
 
 ./singularity.ninja.sh $@ build/schaerWaves-btf-300dz-linearUpwind/s3.uploaded

@@ -56,6 +56,10 @@ aws s3 cp --recursive ${s3uri}mountainAdvect-maxdt-btf-6000m-cubicFit-collated b
 aws s3 cp --recursive ${s3uri}mountainAdvect-maxdt-cutCell-6000m-cubicFit-collated build/mountainAdvect-maxdt-cutCell-6000m-cubicFit-collated
 aws s3 cp --recursive ${s3uri}mountainAdvect-maxdt-slantedCell-6000m-cubicFit-collated build/mountainAdvect-maxdt-slantedCell-6000m-cubicFit-collated
 
+aws s3 cp --recursive ${s3uri}resting-btf-1000m-cubicFit build/resting-btf-1000m-cubicFit
+aws s3 cp --recursive ${s3uri}resting-sleve-1000m-cubicFit build/resting-sleve-1000m-cubicFit
+aws s3 cp --recursive ${s3uri}resting-cutCell-1000m-cubicFit build/resting-cutCell-1000m-cubicFit
+aws s3 cp --recursive ${s3uri}resting-slantedCell-1000m-cubicFit build/resting-slantedCell-1000m-cubicFit
 aws s3 cp --recursive ${s3uri}resting-btf-linearUpwind-collated build/resting-btf-linearUpwind-collated
 aws s3 cp --recursive ${s3uri}resting-btf-cubicFit-collated build/resting-btf-cubicFit-collated
 aws s3 cp --recursive ${s3uri}resting-sleve-linearUpwind-collated build/resting-sleve-linearUpwind-collated
