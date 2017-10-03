@@ -24,6 +24,7 @@ set -e
 ./singularity.ninja.sh $@ build/resting-{btf,sleve,cutCell,slantedCell}-{linearUpwind,cubicFit}-collated/s3.uploaded
 
 ./singularity.ninja.sh $@ build/schaerWaves-btf-300dz-linearUpwind/s3.uploaded
+./singularity.ninja.sh $@ build/schaerWaves-{btf,cutCell,slantedCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/s3.uploaded
 
 ./singularity.ninja.sh $@ build/thermalAdvect-{btf,cutCell,slantedCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/18000/T_diff.sampleLine.dat
 ./singularity.ninja.sh $@ build/thermalAdvect-{btf,cutCell,slantedCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/18000/l{2,inf}errorT.txt
