@@ -12,7 +12,15 @@ class SchaerWaves:
 
         self.btfCubicFit50dz = ninja.SchaerWaves('schaerWaves-btf-50dz-cubicFit', meshes.btf50dz, 8.0, cubicFit, parallel, fast, meshes.btfFast)
 
+        self.cutCellCubicFit300dz = ninja.SchaerWaves('schaerWaves-cutCell-300dz-cubicFit', meshes.cutCell300dz, 8.0, cubicFit, parallel, fast, meshes.btfFast)
+
+        self.slantedCellCubicFit300dz = ninja.SchaerWaves('schaerWaves-slantedCell-300dz-cubicFit', meshes.slantedCell300dz, 8.0, cubicFit, parallel, fast, meshes.btfFast)
+
     def addTo(self, build):
         build.add(self.btfLinearUpwind300dz)
         build.add(self.btfCubicFit300dz)
         build.add(self.btfCubicFit50dz)
+
+        build.add(self.cutCellCubicFit300dz)
+
+        build.add(self.slantedCellCubicFit300dz)
