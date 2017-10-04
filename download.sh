@@ -70,9 +70,33 @@ aws s3 cp --recursive ${s3uri}resting-slantedCell-linearUpwind-collated build/re
 aws s3 cp --recursive ${s3uri}resting-slantedCell-cubicFit-collated build/resting-slantedCell-cubicFit-collated
 
 aws s3 cp --recursive ${s3uri}schaerWaves-btf-300dz-linearUpwind build/schaerWaves-btf-300dz-linearUpwind
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-500dz-cubicFit build/schaerWaves-btf-500dz-cubicFit
 aws s3 cp --recursive ${s3uri}schaerWaves-btf-300dz-cubicFit build/schaerWaves-btf-300dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-250dz-cubicFit build/schaerWaves-btf-250dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-200dz-cubicFit build/schaerWaves-btf-200dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-150dz-cubicFit build/schaerWaves-btf-150dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-125dz-cubicFit build/schaerWaves-btf-125dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-100dz-cubicFit build/schaerWaves-btf-100dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-75dz-cubicFit build/schaerWaves-btf-75dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-50dz-cubicFit build/schaerWaves-btf-50dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-500dz-cubicFit build/schaerWaves-cutCell-500dz-cubicFit
 aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-300dz-cubicFit build/schaerWaves-cutCell-300dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-250dz-cubicFit build/schaerWaves-cutCell-250dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-200dz-cubicFit build/schaerWaves-cutCell-200dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-150dz-cubicFit build/schaerWaves-cutCell-150dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-125dz-cubicFit build/schaerWaves-cutCell-125dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-100dz-cubicFit build/schaerWaves-cutCell-100dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-75dz-cubicFit build/schaerWaves-cutCell-75dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-50dz-cubicFit build/schaerWaves-cutCell-50dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-500dz-cubicFit build/schaerWaves-slantedCell-500dz-cubicFit
 aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-300dz-cubicFit build/schaerWaves-slantedCell-300dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-250dz-cubicFit build/schaerWaves-slantedCell-250dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-200dz-cubicFit build/schaerWaves-slantedCell-200dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-150dz-cubicFit build/schaerWaves-slantedCell-150dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-125dz-cubicFit build/schaerWaves-slantedCell-125dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-100dz-cubicFit build/schaerWaves-slantedCell-100dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-75dz-cubicFit build/schaerWaves-slantedCell-75dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-50dz-cubicFit build/schaerWaves-slantedCell-50dz-cubicFit
 
 aws s3 cp --recursive ${s3uri}thermalAdvect-btf-500dz-cubicFit build/thermalAdvect-btf-500dz-cubicFit
 aws s3 cp --recursive ${s3uri}thermalAdvect-btf-300dz-cubicFit build/thermalAdvect-btf-300dz-cubicFit
