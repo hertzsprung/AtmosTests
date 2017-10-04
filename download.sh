@@ -69,6 +69,11 @@ aws s3 cp --recursive ${s3uri}resting-cutCell-cubicFit-collated build/resting-cu
 aws s3 cp --recursive ${s3uri}resting-slantedCell-linearUpwind-collated build/resting-slantedCell-linearUpwind-collated
 aws s3 cp --recursive ${s3uri}resting-slantedCell-cubicFit-collated build/resting-slantedCell-cubicFit-collated
 
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-300dz-linearUpwind build/schaerWaves-btf-300dz-linearUpwind
+aws s3 cp --recursive ${s3uri}schaerWaves-btf-300dz-cubicFit build/schaerWaves-btf-300dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-cutCell-300dz-cubicFit build/schaerWaves-cutCell-300dz-cubicFit
+aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-300dz-cubicFit build/schaerWaves-slantedCell-300dz-cubicFit
+
 aws s3 cp --recursive ${s3uri}thermalAdvect-btf-500dz-cubicFit build/thermalAdvect-btf-500dz-cubicFit
 aws s3 cp --recursive ${s3uri}thermalAdvect-btf-300dz-cubicFit build/thermalAdvect-btf-300dz-cubicFit
 aws s3 cp --recursive ${s3uri}thermalAdvect-btf-250dz-cubicFit build/thermalAdvect-btf-250dz-cubicFit
