@@ -17,7 +17,13 @@ class Solvers:
                 'exnerFoamH -case $case',
                 parallel)
 
+        self.exnerFoamCP = SolverRule(
+                'exnerFoamCP',
+                'exnerFoamCPinterpGrad -case $case',
+                parallel)
+
     def addTo(self, build):
         build.add(self.advectionFoam)
         build.add(self.sphericalAdvectionFoam)
         build.add(self.exnerFoamH)
+        build.add(self.exnerFoamCP)

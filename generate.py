@@ -23,6 +23,7 @@ class AtmosTests:
             'generators/resting.py',
             'generators/schaerAdvect.py',
             'generators/schaerWaves.py',
+            'generators/schaerWavesCP.py',
             'generators/solvers.py',
             'generators/tfAdvect.py',
             'generators/thermalAdvect.py'
@@ -44,6 +45,7 @@ class AtmosTests:
 
         generators.SchaerWaves(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
         generators.ThermalAdvect(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
+        generators.SchaerWavesCP(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
 
     def write(self):
         self.build.write()
