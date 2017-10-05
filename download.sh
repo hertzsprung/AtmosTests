@@ -125,3 +125,5 @@ aws s3 cp --recursive ${s3uri}thermalAdvect-slantedCell-125dz-cubicFit build/the
 aws s3 cp --recursive ${s3uri}thermalAdvect-slantedCell-100dz-cubicFit build/thermalAdvect-slantedCell-100dz-cubicFit
 aws s3 cp --recursive ${s3uri}thermalAdvect-slantedCell-75dz-cubicFit build/thermalAdvect-slantedCell-75dz-cubicFit
 aws s3 cp --recursive ${s3uri}thermalAdvect-slantedCell-50dz-cubicFit build/thermalAdvect-slantedCell-50dz-cubicFit
+
+aws s3 cp --recursive ${s3uri}schaerWavesCP-btf-300dz build/schaerWavesCP-btf-300dz

@@ -60,6 +60,7 @@ interpolationSchemes
     interpolate(grad(theta))     midPoint;
     interpolate(Exner)           midPoint;
     H                            midPoint;
+    thetaFromb                   midPoint;
 }
 
 snGradSchemes
