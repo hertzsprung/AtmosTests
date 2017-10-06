@@ -27,3 +27,5 @@ ninja $@ build/schaerWaves-btf-50dz-cubicFit/18000/theta_diff
 
 ninja $@ build/thermalAdvect-{btf,cutCell,slantedCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/18000/T_diff.sampleLine.dat
 ninja $@ build/thermalAdvect-{btf,cutCell,slantedCell}-{500,300,250,200,150,125,100,75,50}dz-cubicFit/18000/l{2,inf}errorT.txt
+
+ninja $@ build/arakawaKonor-uniform-lorenz/{0,172800}/theta_diff

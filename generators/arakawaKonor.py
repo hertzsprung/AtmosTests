@@ -10,7 +10,7 @@ class ArakawaKonor:
 
         self.meshFast = BlockMesh('arakawaKonor-mesh-fast', os.path.join('src/arakawaKonor/mesh-fast'))
         self.meshUniform = BlockMesh('arakawaKonor-mesh-uniform', os.path.join('src/arakawaKonor/mesh-uniform'))
-        self.uniform = ninja.ArakawaKonor('arakawaKonor-uniform', self.meshUniform, lorenz, linearUpwind, parallel, fast, self.meshFast)
+        self.uniform = ninja.ArakawaKonor('arakawaKonor-uniform-lorenz', self.meshUniform, lorenz, linearUpwind, parallel, fast, self.meshFast)
 
     def addTo(self, build):
         build.add(self.meshUniform)
