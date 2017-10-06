@@ -18,6 +18,7 @@ class AtmosTests:
 
         self.build = Build([
             'generators/advect.py',
+            'generators/arakawaKonor.py',
             'generators/deformationSphere.py',
             'generators/mountainAdvect.py',
             'generators/resting.py',
@@ -45,6 +46,7 @@ class AtmosTests:
 
         generators.SchaerWaves(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
         generators.ThermalAdvect(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
+        generators.ArakawaKonor(self.parallel, self.fast).addTo(self.build)
         generators.SchaerWavesCP(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
 
     def write(self):
