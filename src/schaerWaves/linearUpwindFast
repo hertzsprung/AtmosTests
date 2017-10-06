@@ -58,6 +58,7 @@ interpolationSchemes
     interpolate(convection(U,u)) midPoint;
     interpolate(u)	         midPoint;
     interpolate(grad(theta))     midPoint;
+    interpolate(grad(thetaf))    midPoint;
     interpolate(Exner)           midPoint;
     H                            midPoint;
     thetaFromb                   midPoint;
