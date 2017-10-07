@@ -25,6 +25,7 @@ class AtmosTests:
             'generators/schaerAdvect.py',
             'generators/schaerWaves.py',
             'generators/schaerWavesCP.py',
+            'generators/schaerWavesMeshes.py',
             'generators/solvers.py',
             'generators/tfAdvect.py',
         ])
