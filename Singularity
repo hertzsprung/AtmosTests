@@ -53,8 +53,9 @@ From:ubuntu:17.04
 
 	DEBIAN_FRONTEND=noninteractive \
         apt-get install -y --no-install-recommends \
-               ninja-build \
+               re2c \
 	       gettext-base \
+               python \
 	       python3-setuptools \
 	       python3-pip \
 	       datamash \
@@ -62,6 +63,12 @@ From:ubuntu:17.04
 	       ssh-client \
 	       git \
 	       ca-certificates
+
+        git clone git://github.com/ninja-build/ninja.git       
+        cd ninja
+        git checkout v1.8.2
+        ./configure.py --bootstrap
+        cp ninja /usr/local/bin/
 
 	pip3 install wheel
 	pip3 install awscli
