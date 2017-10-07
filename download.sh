@@ -75,3 +75,4 @@ aws s3 cp --recursive ${s3uri}schaerWaves-slantedCell-300dz-cubicFit build/schae
 aws s3 cp --recursive ${s3uri}schaerWavesCP-btf-300dz build/schaerWavesCP-btf-300dz
 
 aws s3 cp --recursive ${s3uri}arakawaKonor-uniform-lorenz build/arakawaKonor-uniform-lorenz
+aws s3 cp --recursive ${s3uri}arakawaKonor-uniform-cp build/arakawaKonor-uniform-cp

@@ -29,4 +29,4 @@ set -e
 ./singularity.ninja.sh $@ build/schaerWaves-{btf,cutCell,slantedCell}-300dz-cubicFit/18000/Uf
 ./singularity.ninja.sh $@ build/schaerWaves-{btf,cutCell,slantedCell}-300dz-cubicFit/s3.uploaded
 
-./singularity.ninja.sh $@ build/arakawaKonor-uniform-lorenz/s3.uploaded
+./singularity.ninja.sh $@ build/arakawaKonor-uniform-{lorenz,cp}/s3.uploaded
