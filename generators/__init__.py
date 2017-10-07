@@ -9,4 +9,3 @@ from .schaerWavesCP import SchaerWavesCP
 from .schaerWavesMeshes import SchaerWavesMeshes
 from .solvers import Solvers
 from .tfAdvect import TerrainFollowingAdvect
-from .thermalAdvect import ThermalAdvect
