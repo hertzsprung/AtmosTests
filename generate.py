@@ -27,7 +27,6 @@ class AtmosTests:
             'generators/schaerWavesCP.py',
             'generators/solvers.py',
             'generators/tfAdvect.py',
-            'generators/thermalAdvect.py'
         ])
 
         generators.Solvers(self.parallel).addTo(self.build)
@@ -45,7 +44,6 @@ class AtmosTests:
         schaerWavesMeshes.addTo(self.build) 
 
         generators.SchaerWaves(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
-        generators.ThermalAdvect(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
         generators.ArakawaKonor(self.parallel, self.fast).addTo(self.build)
         generators.SchaerWavesCP(schaerWavesMeshes, self.parallel, self.fast).addTo(self.build)
 
