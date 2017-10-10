@@ -89,9 +89,7 @@ class Resting:
                     RestingCollated.Test('resting-sleve-1000m-cubicFit', 1000, meshSleve1000m, timestep=25),
                     RestingCollated.Test('resting-sleve-2000m-cubicFit', 2000, meshSleve2000m, timestep=25),
                     RestingCollated.Test('resting-sleve-3000m-cubicFit', 3000, meshSleve3000m, timestep=25),
-                    RestingCollated.Test('resting-sleve-4000m-cubicFit', 4000, meshSleve4000m, timestep=25),
-                    RestingCollated.Test('resting-sleve-5000m-cubicFit', 5000, meshSleve5000m, timestep=25),
-                    RestingCollated.Test('resting-sleve-6000m-cubicFit', 6000, meshSleve6000m, timestep=25)
+                    RestingCollated.Test('resting-sleve-4000m-cubicFit', 4000, meshSleve4000m, timestep=25)
         ])
 
         self.cutCellLinearUpwind = resting.collateByMountainHeight(
