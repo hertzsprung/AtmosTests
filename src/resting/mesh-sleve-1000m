@@ -8,8 +8,8 @@ FoamFile {
 
 type			sleve;
 domainHeight		20e3;
-coarseScale		4e3;
-fineScale		1e3;
+coarseScale		8e3;
+fineScale		6e3;
 exponent		1.35;
 
 mountain
