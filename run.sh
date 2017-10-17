@@ -18,7 +18,7 @@ ninja $@ build/mountainAdvect-maxdt-{btf,cutCell,slantedCell}-6000m-cubicFit-col
 ninja $@ build/mountainAdvect-h0-slantedCell-1000-6000m-linearUpwind/co.txt
 ninja $@ build/mountainAdvect-h0-{btf,cutCell,slantedCell}-1000-5000m-linearUpwind/10000/{T,T_analytic,T_diff}
 
-ninja $@ build/resting-{btf,sleve,cutCell,slantedCell}-6000m/constant/polyMesh/points
+ninja $@ build/resting-mesh-{btf,sleve,cutCell,slantedCell}-6000m/constant/polyMesh/points
 ninja $@ build/resting-{btf,sleve,cutCell,slantedCell}-1000m-cubicFit/energy.dat
 ninja $@ build/resting-{btf,sleve,cutCell,slantedCell}-cubicFit-collated/maxw.txt
 
