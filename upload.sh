@@ -6,7 +6,7 @@ set -e
 ./singularity.ninja.sh $@ build/{schaer,tf}Advect-{btf,cutCell}-1000-{linearUpwind,cubicFit}/s3.uploaded
 ./singularity.ninja.sh $@ build/{schaer,tf}Advect-{btf,cutCell}-{linearUpwind,cubicFit}-collated/s3.uploaded
 
-./singularity.ninja.sh $@ build/deformationSphere-mesh-hex-{4,9}/averageEquatorialSpacing.txt
+./singularity.ninja.sh $@ build/deformationSphere-mesh-hex-{4,8,9}/averageEquatorialSpacing.txt
 ./singularity.ninja.sh $@ build/deformationSphere-mesh-hex-{4,9}/s3.uploaded
 ./singularity.ninja.sh $@ build/deformationSphere-gaussians-{hex,cubedSphere}-{linearUpwind,cubicFit}-collated/s3.uploaded
 ./singularity.ninja.sh $@ build/deformationSphere-gaussians-hex-8-cubicFit/s3.uploaded

@@ -23,6 +23,7 @@ aws s3 cp --recursive ${s3uri}tfAdvect-btf-cubicFit-collated build/tfAdvect-btf-
 aws s3 cp --recursive ${s3uri}tfAdvect-cutCell-cubicFit-collated build/tfAdvect-cutCell-cubicFit-collated
 
 aws s3 cp --recursive ${s3uri}deformationSphere-mesh-hex-4 build/deformationSphere-mesh-hex-4
+aws s3 cp --recursive ${s3uri}deformationSphere-mesh-hex-8 build/deformationSphere-mesh-hex-8
 aws s3 cp --recursive ${s3uri}deformationSphere-mesh-hex-9 build/deformationSphere-mesh-hex-9
 aws s3 cp --recursive ${s3uri}deformationSphere-gaussians-hex-8-cubicFit build/deformationSphere-gaussians-hex-8-cubicFit
 aws s3 cp --recursive ${s3uri}deformationSphere-gaussians-hex-linearUpwind-collated build/deformationSphere-gaussians-hex-linearUpwind-collated
