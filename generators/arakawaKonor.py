@@ -1,5 +1,4 @@
 import ninjaopenfoam as ninja
-from ninjaopenfoam import BlockMesh
 
 import os
 
