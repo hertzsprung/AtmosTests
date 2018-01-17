@@ -5,7 +5,8 @@
 |   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
-FoamFile {
+FoamFile
+{
     version     2.0;
     format      ascii;
     class       dictionary;
@@ -26,6 +27,6 @@ writePrecision      12;
 writeCompression    uncompressed;
 timeFormat          fixed;
 timePrecision       0;
-libs                ("libprescribedFields.so" "liborography.so" "libthermalFields.so");
+libs                ("libhighOrderFit.so" "libfiniteVolumeHighOrderFit.so");
 
 // ************************************************************************* //

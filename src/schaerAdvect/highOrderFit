@@ -1,0 +1,76 @@
+FoamFile {
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSchemes;
+}
+
+interpolationSchemes {
+    diagnoseHighOrderFit highOrderFit 
+    cartesian
+    (
+        (0 0 0)
+        (1 0 0)
+        (2 0 0)
+        (3 0 0)
+        (0 0 1)
+        (1 0 1)
+        (0 0 2)
+        (2 0 1)
+        (1 0 2)
+    )
+    inverseDistanceMultipliers;
+}
+
+divSchemes {
+    default      none;
+    div(phi,T)   Gauss highOrderFit 
+    cartesian
+    (
+        (0 0 0)
+        (1 0 0)
+        (2 0 0)
+        (3 0 0)
+        (0 0 1)
+        (1 0 1)
+        (0 0 2)
+        (2 0 1)
+        (1 0 2)
+    )
+    inverseDistanceMultipliers;
+    div(phi,T_0)   Gauss highOrderFit 
+    cartesian
+    (
+        (0 0 0)
+        (1 0 0)
+        (2 0 0)
+        (3 0 0)
+        (0 0 1)
+        (1 0 1)
+        (0 0 2)
+        (2 0 1)
+        (1 0 2)
+    )
+    inverseDistanceMultipliers;
+}
+
+gradSchemes {
+    default     none;
+}
+
+snGradSchemes {
+    default     none;
+}
+
+laplacianSchemes {
+    default     none;
+}
+
+ddtSchemes {
+    default     none;
+}
+
+fluxRequired {
+    default     no;
+}
