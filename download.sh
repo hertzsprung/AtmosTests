@@ -81,3 +81,7 @@ aws s3 cp --recursive ${s3uri}schaerWavesCP-btf-300dz build/schaerWavesCP-btf-30
 
 aws s3 cp --recursive ${s3uri}arakawaKonor-uniform-lorenz build/arakawaKonor-uniform-lorenz
 aws s3 cp --recursive ${s3uri}arakawaKonor-uniform-cp build/arakawaKonor-uniform-cp
+aws s3 cp --recursive ${s3uri}arakawaKonor-horizontalGrading-lorenz build/arakawaKonor-horizontalGrading-lorenz
+aws s3 cp --recursive ${s3uri}arakawaKonor-horizontalGrading-cp build/arakawaKonor-horizontalGrading-cp
+aws s3 cp --recursive ${s3uri}arakawaKonor-verticalGrading-lorenz build/arakawaKonor-verticalGrading-lorenz
+#aws s3 cp --recursive ${s3uri}arakawaKonor-verticalGrading-cp build/arakawaKonor-verticalGrading-cp
