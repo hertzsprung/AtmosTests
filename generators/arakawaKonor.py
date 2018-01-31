@@ -16,7 +16,7 @@ class ArakawaKonor:
         self.horizontalGradingCP = ninja.ArakawaKonor('arakawaKonor-horizontalGrading-cp', meshes.horizontalGrading, cp, fvSchemesCP, parallel, fast, meshes.fast)
 
         self.verticalGradingLorenz = ninja.ArakawaKonor('arakawaKonor-verticalGrading-lorenz', meshes.verticalGrading, lorenz, linearUpwind, parallel, fast, meshes.fast)
-        self.verticalGradingCP = ninja.ArakawaKonor('arakawaKonor-verticalGrading-cp', meshes.verticalGrading, cp, fvSchemesCP, parallel, fast, meshes.fast)
+        self.verticalGradingCP = ninja.ArakawaKonor('arakawaKonor-verticalGrading-cp', meshes.verticalGrading, cp, fvSchemesCP, parallel, fast, meshes.fast, endTime=10950)
 
     def addTo(self, build):
         build.add(self.uniformLorenz)
