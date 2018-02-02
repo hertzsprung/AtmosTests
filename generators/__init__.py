@@ -4,6 +4,7 @@ from .arakawaKonorAdvect import ArakawaKonorAdvect
 from .arakawaKonorMeshes import ArakawaKonorMeshes
 from .deformationSphere import DeformationSphere
 from .mountainAdvect import MountainAdvect
+from .deformationPlane import DeformationPlane
 from .resting import Resting
 from .schaerAdvect import SchaerAdvect
 from .schaerWaves import SchaerWaves
