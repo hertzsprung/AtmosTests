@@ -22,6 +22,7 @@ class AtmosTests:
             'generators/arakawaKonorAdvect.py',
             'generators/arakawaKonorMeshes.py',
             'generators/deformationSphere.py',
+            'generators/deformationPlane.py',
             'generators/mountainAdvect.py',
             'generators/resting.py',
             'generators/schaerAdvect.py',
@@ -40,6 +41,7 @@ class AtmosTests:
         generators.SchaerAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.TerrainFollowingAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.DeformationSphere(self.parallel, self.fast).addTo(self.build)
+        generators.DeformationPlane(self.parallel, self.fast).addTo(self.build)
         generators.MountainAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.Resting(self.parallel, self.fast).addTo(self.build)
 
