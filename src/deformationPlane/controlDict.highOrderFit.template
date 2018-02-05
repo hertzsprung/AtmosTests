@@ -1,0 +1,31 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile {
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+startFrom           startTime;
+startTime           0;
+stopAt              endTime;
+endTime             $endTime;
+deltaT              $timestep;
+writeControl        runTime;
+writeInterval       $writeInterval;
+writeFormat         binary;
+writePrecision      12;
+writeCompression    uncompressed;
+timeFormat          fixed;
+timePrecision       0;
+libs                ("libhighOrderFit.so" "libfiniteVolumeHighOrderFit.so");
+
+// ************************************************************************* //
