@@ -82,4 +82,5 @@ From:ubuntu:17.04
 	       atmosfoam \
 	       gmd-geodesic-mesh \
 	       asam-gridgen \
-	       gmv2openfoam
+	       gmv2openfoam \
+	       highorderfit
