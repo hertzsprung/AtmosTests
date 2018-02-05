@@ -1,7 +1,11 @@
+from ninjaopenfoam import GhostMesh	
+import os
 
 class DeformationPlane:
     def __init__(self, parallel, fast):
-        pass
+        fastMesh = GhostMesh('deformationPlane-mesh-fast', os.path.join('src/deformationPlane/mesh-fast'))
+
+        self.meshes = [fastMesh]
 
     def addTo(self, build):
-        pass
+        build.addAll(self.meshes)
