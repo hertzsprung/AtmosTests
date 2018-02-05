@@ -1,5 +1,5 @@
 Bootstrap:docker
-From:ubuntu:17.04
+From:ubuntu:17.10
 
 %environment
 	export FOAM_TUTORIALS=/opt/openfoam-dev/tutorials
@@ -44,15 +44,15 @@ From:ubuntu:17.04
 	export WM_PROJECT_DIR=/opt/openfoam-dev
 
 %post
-	apt-get update -qq
-	apt-get install wget software-properties-common apt-transport-https -y --no-install-recommends
+	apt update -qq
+	apt install wget software-properties-common apt-transport-https -y --no-install-recommends
 	sh -c "wget -O - http://dl.openfoam.org/gpg.key | apt-key add -"
 	add-apt-repository "http://dl.openfoam.org/ubuntu dev" -y
 	add-apt-repository "http://atmosfoam-apt.s3-website-eu-west-1.amazonaws.com dev" -y
-	apt-get update -qq
+	apt update -qq --allow-insecure-repositories
 
 	DEBIAN_FRONTEND=noninteractive \
-        apt-get install -y --no-install-recommends \
+        apt install -y --no-install-recommends \
                re2c \
 	       gettext-base \
                python \
@@ -77,7 +77,7 @@ From:ubuntu:17.04
 	pip3 install ninjaopenfoam/
 
 	DEBIAN_FRONTEND=noninteractive \
-        apt-get install -y --no-install-recommends --allow-unauthenticated \
+        apt install -y --no-install-recommends --allow-unauthenticated \
 	       atmosfoam-tools \
 	       atmosfoam \
 	       gmd-geodesic-mesh \
