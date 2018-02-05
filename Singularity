@@ -59,7 +59,7 @@ From:ubuntu:17.10
 	       python3-setuptools \
 	       python3-pip \
 	       datamash \
-	       openfoam-dev \
+	       openfoam-dev=20180114 \
 	       ssh-client \
 	       git \
 	       ca-certificates
