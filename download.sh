@@ -31,6 +31,11 @@ aws s3 cp --recursive ${s3uri}deformationSphere-gaussians-hex-cubicFit-collated 
 aws s3 cp --recursive ${s3uri}deformationSphere-gaussians-cubedSphere-linearUpwind-collated build/deformationSphere-gaussians-cubedSphere-linearUpwind-collated
 aws s3 cp --recursive ${s3uri}deformationSphere-gaussians-cubedSphere-cubicFit-collated build/deformationSphere-gaussians-cubedSphere-cubicFit-collated
 
+aws s3 cp --recursive ${s3uri}deformationPlane-uniform-cubicFit-collated build/deformationPlane-uniform-cubicFit-collated
+aws s3 cp --recursive ${s3uri}deformationPlane-uniform-highOrderFit-collated build/deformationPlane-uniform-highOrderFit-collated
+aws s3 cp --recursive ${s3uri}deformationPlane-distorted-cubicFit-collated build/deformationPlane-distorted-cubicFit-collated
+aws s3 cp --recursive ${s3uri}deformationPlane-distorted-highOrderFit-collated build/deformationPlane-distorted-highOrderFit-collated
+
 aws s3 cp --recursive ${s3uri}mountainAdvect-h0-btf-1000-linearUpwind-collated build/mountainAdvect-h0-btf-1000-linearUpwind-collated
 aws s3 cp --recursive ${s3uri}mountainAdvect-h0-btf-1000-cubicFit-collated build/mountainAdvect-h0-btf-1000-cubicFit-collated
 aws s3 cp --recursive ${s3uri}mountainAdvect-h0-cutCell-1000-linearUpwind-collated build/mountainAdvect-h0-cutCell-1000-linearUpwind-collated
