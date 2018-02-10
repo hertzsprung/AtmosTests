@@ -17,7 +17,7 @@ class SchaerAdvectSmooth:
                 tests=[
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-5000-cubicFit', 5000,     advect.meshBtf5000_3000m, timestep=80),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-2500-cubicFit', 2500,     advect.meshBtf2500_3000m, timestep=40),
-                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-2000-cubicFit', 2000,     advect.meshBtf2000_3000m, timestep=32),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-2000-cubicFit', 2000,     advect.meshBtf2000_3000m, timestep=25),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-1250-cubicFit', 1250,     advect.meshBtf1250_3000m, timestep=20),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-1000-cubicFit', 1000,     advect.meshBtf1000_3000m, timestep=16),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-667-cubicFit',  1000/3*2, advect.meshBtf667_3000m,  timestep=10),
@@ -34,7 +34,7 @@ class SchaerAdvectSmooth:
                 tests=[
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-5000-highOrderFit', 5000,     advect.meshBtf5000_3000m, timestep=80),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-2500-highOrderFit', 2500,     advect.meshBtf2500_3000m, timestep=40),
-                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-2000-highOrderFit', 2000,     advect.meshBtf2000_3000m, timestep=32),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-2000-highOrderFit', 2000,     advect.meshBtf2000_3000m, timestep=25),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-1250-highOrderFit', 1250,     advect.meshBtf1250_3000m, timestep=20),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-1000-highOrderFit', 1000,     advect.meshBtf1000_3000m, timestep=16),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-667-highOrderFit',  1000/3*2, advect.meshBtf667_3000m,  timestep=10),
