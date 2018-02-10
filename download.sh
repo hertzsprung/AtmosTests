@@ -36,6 +36,11 @@ aws s3 cp --recursive ${s3uri}deformationPlane-uniform-highOrderFit-collated bui
 aws s3 cp --recursive ${s3uri}deformationPlane-distorted-cubicFit-collated build/deformationPlane-distorted-cubicFit-collated
 aws s3 cp --recursive ${s3uri}deformationPlane-distorted-highOrderFit-collated build/deformationPlane-distorted-highOrderFit-collated
 
+aws s3 cp --recursive ${s3uri}schaerAdvectSmooth-cos4-btf-cubicFit-collated build/schaerAdvectSmooth-cos4-btf-cubicFit-collated
+aws s3 cp --recursive ${s3uri}schaerAdvectSmooth-cos4-btf-highOrderFit-collated build/schaerAdvectSmooth-cos4-btf-highOrderFit-collated
+aws s3 cp --recursive ${s3uri}schaerAdvectSmooth-cos4-cutCell-cubicFit-collated build/schaerAdvectSmooth-cos4-cutCell-cubicFit-collated
+aws s3 cp --recursive ${s3uri}schaerAdvectSmooth-cos4-cutCell-highOrderFit-collated build/schaerAdvectSmooth-cos4-cutCell-highOrderFit-collated
+
 aws s3 cp --recursive ${s3uri}mountainAdvect-h0-btf-1000-linearUpwind-collated build/mountainAdvect-h0-btf-1000-linearUpwind-collated
 aws s3 cp --recursive ${s3uri}mountainAdvect-h0-btf-1000-cubicFit-collated build/mountainAdvect-h0-btf-1000-cubicFit-collated
 aws s3 cp --recursive ${s3uri}mountainAdvect-h0-cutCell-1000-linearUpwind-collated build/mountainAdvect-h0-cutCell-1000-linearUpwind-collated

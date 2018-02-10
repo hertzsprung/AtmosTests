@@ -13,6 +13,8 @@ set -e
 
 ./singularity.ninja.sh $@ build/deformationPlane-{uniform,distorted}-{cubicFit,highOrderFit}-collated/s3.uploaded
 
+./singularity.ninja.sh $@ build/schaerAdvectSmooth-cos{2,4}-{btf,cutCell}-{cubicFit,highOrderFit}-collated/s3.uploaded
+
 ./singularity.ninja.sh $@ build/mountainAdvect-h0-{btf,cutCell,slantedCell}-1000-{linearUpwind,cubicFit}-collated/10000/l2errorT.txt
 ./singularity.ninja.sh $@ build/mountainAdvect-h0-{btf,cutCell,slantedCell}-1000-5000m-{linearUpwind,cubicFit}/10000/l{2,inf}errorT.txt
 ./singularity.ninja.sh $@ build/mountainAdvect-h0-{btf,cutCell,slantedCell}-1000-{0,3000,4000,5000,6000}m-linearUpwind/dt.txt
