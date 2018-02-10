@@ -1,10 +1,11 @@
-from ninjaopenfoam import BlockMesh, SchaerAdvectBuilder, SchaerAdvectCollated, TerrainFollowingMesh
+from ninjaopenfoam import SchaerAdvectBuilder, SchaerAdvectCollated
 import os
 
 class TerrainFollowingAdvect:
     def __init__(self, advect, parallel, fast):
         tfAdvect = SchaerAdvectBuilder(
                 mountainHeight=6000,
+                tracerField=os.path.join('src/schaerAdvect/tracerField'),
                 velocityField=os.path.join('src/tfAdvect/velocityField'),
                 parallel=parallel,
                 fast=fast,

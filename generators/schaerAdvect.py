@@ -1,10 +1,11 @@
-from ninjaopenfoam import BlockMesh, SchaerAdvectBuilder, SchaerAdvectCollated, TerrainFollowingMesh
+from ninjaopenfoam import SchaerAdvectBuilder, SchaerAdvectCollated
 import os
 
 class SchaerAdvect:
     def __init__(self, advect, parallel, fast):
         schaerAdvect = SchaerAdvectBuilder(
                 mountainHeight=6000,
+                tracerField=os.path.join('src/schaerAdvect/tracerField'),
                 velocityField=os.path.join('src/schaerAdvect/velocityField'),
                 parallel=parallel,
                 fast=fast,
@@ -40,24 +41,6 @@ class SchaerAdvect:
                     SchaerAdvectCollated.Test('schaerAdvect-btf-250-cubicFit',  250,      advect.meshBtf250_6000m,  timestep=2)
         ])
 
-        self.btfHighOrderFitCollated = schaerAdvect.collated(
-                'schaerAdvect-btf-highOrderFit-collated',
-                fvSchemes=os.path.join('src/schaerAdvect/highOrderFit'),
-                tests=[
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-5000-highOrderFit', 5000,     advect.meshBtf5000_6000m, timestep=40),
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-2500-highOrderFit', 2500,     advect.meshBtf2500_6000m, timestep=20),
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-2000-highOrderFit', 2000,     advect.meshBtf2000_6000m, timestep=16),
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-1250-highOrderFit', 1250,     advect.meshBtf1250_6000m, timestep=10),
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-1000-highOrderFit', 1000,     advect.meshBtf1000_6000m, timestep=8),
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-667-highOrderFit',  1000/3*2, advect.meshBtf667_6000m,  timestep=5),
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-500-highOrderFit',  500,      advect.meshBtf500_6000m,  timestep=4),
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-333-highOrderFit',  1000/3,   advect.meshBtf333_6000m,  timestep=2.5),
-                    SchaerAdvectCollated.Test('schaerAdvect-btf-250-highOrderFit',  250,      advect.meshBtf250_6000m,  timestep=2)
-                ],
-                controlDict=os.path.join('src/controlDict.highOrderFit.template'),
-                solverRule='advectionFoamHighOrderFit'
-        )
-
         self.cutCellLinearUpwindCollated = schaerAdvect.collated(
                 'schaerAdvect-cutCell-linearUpwind-collated',
                 fvSchemes=os.path.join('src/schaerAdvect/linearUpwind'),
@@ -88,34 +71,12 @@ class SchaerAdvect:
                     SchaerAdvectCollated.Test('schaerAdvect-cutCell-250-cubicFit',  250,      advect.meshCutCell250_6000m,  timestep=10)
         ])
 
-        self.cutCellHighOrderFitCollated = schaerAdvect.collated(
-                'schaerAdvect-cutCell-highOrderFit-collated',
-                fvSchemes=os.path.join('src/schaerAdvect/highOrderFit'),
-                tests=[
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-5000-highOrderFit', 5000,     advect.meshCutCell5000_6000m, timestep=200),
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-2500-highOrderFit', 2500,     advect.meshCutCell2500_6000m, timestep=100),
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-2000-highOrderFit', 2000,     advect.meshCutCell2000_6000m, timestep=80),
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-1250-highOrderFit', 1250,     advect.meshCutCell1250_6000m, timestep=50),
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-1000-highOrderFit', 1000,     advect.meshCutCell1000_6000m, timestep=40),
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-667-highOrderFit',  1000/3*2, advect.meshCutCell667_6000m,  timestep=25),
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-500-highOrderFit',  500,      advect.meshCutCell500_6000m,  timestep=20),
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-333-highOrderFit',  1000/3,   advect.meshCutCell333_6000m,  timestep=12.5),
-                    SchaerAdvectCollated.Test('schaerAdvect-cutCell-250-highOrderFit',  250,      advect.meshCutCell250_6000m,  timestep=10)
-                ],
-                controlDict=os.path.join('src/controlDict.highOrderFit.template'),
-                solverRule='advectionFoamHighOrderFit'
-        )
-
     def addTo(self, build):
         build.add(self.btfLinearUpwindCollated)
         build.addAll(self.btfLinearUpwindCollated.tests)
         build.add(self.btfCubicFitCollated)
         build.addAll(self.btfCubicFitCollated.tests)
-        build.add(self.btfHighOrderFitCollated)
-        build.addAll(self.btfHighOrderFitCollated.tests)
         build.add(self.cutCellLinearUpwindCollated)
         build.addAll(self.cutCellLinearUpwindCollated.tests)
         build.add(self.cutCellCubicFitCollated)
         build.addAll(self.cutCellCubicFitCollated.tests)
-        build.add(self.cutCellHighOrderFitCollated)
-        build.addAll(self.cutCellHighOrderFitCollated.tests)

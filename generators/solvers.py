@@ -7,9 +7,14 @@ class Solvers:
                 'advectionFoam -case $case -heun2',
                 parallel)
 
+        self.advectionFoamRK4 = SolverRule(
+                'advectionFoamRK4',
+                'advectionFoam -case $case -rk4',
+                parallel)
+
         self.advectionFoamHighOrderFit = SolverRule(
                 'advectionFoamHighOrderFit',
-                'advectionFoamHighOrderFit -case $case -heun2',
+                'advectionFoamHighOrderFit -case $case',
                 parallel)
 
         self.advectiveFoamF = SolverRule(
@@ -34,6 +39,7 @@ class Solvers:
 
     def addTo(self, build):
         build.add(self.advectionFoam)
+        build.add(self.advectionFoamRK4)
         build.add(self.advectionFoamHighOrderFit)
         build.add(self.advectiveFoamF)
         build.add(self.sphericalAdvectionFoam)

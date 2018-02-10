@@ -7,6 +7,7 @@ from .mountainAdvect import MountainAdvect
 from .deformationPlane import DeformationPlane
 from .resting import Resting
 from .schaerAdvect import SchaerAdvect
+from .schaerAdvectSmooth import SchaerAdvectSmooth
 from .schaerWaves import SchaerWaves
 from .schaerWavesCP import SchaerWavesCP
 from .schaerWavesMeshes import SchaerWavesMeshes

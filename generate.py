@@ -26,6 +26,7 @@ class AtmosTests:
             'generators/mountainAdvect.py',
             'generators/resting.py',
             'generators/schaerAdvect.py',
+            'generators/schaerAdvectSmooth.py',
             'generators/schaerWaves.py',
             'generators/schaerWavesCP.py',
             'generators/schaerWavesMeshes.py',
@@ -42,6 +43,7 @@ class AtmosTests:
         generators.TerrainFollowingAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.DeformationSphere(self.parallel, self.fast).addTo(self.build)
         generators.DeformationPlane(self.parallel, self.fast).addTo(self.build)
+        generators.SchaerAdvectSmooth(advect, self.parallel, self.fast).addTo(self.build)
         generators.MountainAdvect(advect, self.parallel, self.fast).addTo(self.build)
         generators.Resting(self.parallel, self.fast).addTo(self.build)
 
