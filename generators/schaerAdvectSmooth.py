@@ -40,7 +40,6 @@ class SchaerAdvectSmooth:
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-667-highOrderFit',  1000/3*2, advect.meshBtf667_3000m,  timestep=10),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-500-highOrderFit',  500,      advect.meshBtf500_3000m,  timestep=8),
                     SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-333-highOrderFit',  1000/3,   advect.meshBtf333_3000m,  timestep=5),
-                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-btf-250-highOrderFit',  250,      advect.meshBtf250_3000m,  timestep=4)
                 ],
                 controlDict=os.path.join('src/controlDict.highOrderFit.template'),
                 solverRule='advectionFoamHighOrderFit'
