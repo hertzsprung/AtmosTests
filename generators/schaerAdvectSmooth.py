@@ -45,9 +45,27 @@ class SchaerAdvectSmooth:
                 solverRule='advectionFoamHighOrderFit'
         )
 
+        self.cos4CutCellCubicFitCollated = schaerAdvectCos4.collated(
+                'schaerAdvectSmooth-cos4-cutCell-cubicFit-collated',
+                fvSchemes=os.path.join('src/schaerAdvect/cubicFit'),
+                tests=[
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-5000-cubicFit', 5000,     advect.meshCutCell5000_3000m, timestep=200),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-2500-cubicFit', 2500,     advect.meshCutCell2500_3000m, timestep=80),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-2000-cubicFit', 2000,     advect.meshCutCell2000_3000m, timestep=50),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-1250-cubicFit', 1250,     advect.meshCutCell1250_3000m, timestep=50),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-1000-cubicFit', 1000,     advect.meshCutCell1000_3000m, timestep=50),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-667-cubicFit',  1000/3*2, advect.meshCutCell667_3000m,  timestep=25),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-500-cubicFit',  500,      advect.meshCutCell500_3000m,  timestep=20),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-333-cubicFit',  1000/3,   advect.meshCutCell333_3000m,  timestep=16),
+                    SchaerAdvectCollated.Test('schaerAdvectSmooth-cos4-cutCell-250-cubicFit',  250,      advect.meshCutCell250_3000m,  timestep=10)
+                ],
+                solverRule='advectionFoamRK4'
+        )
+
     def addTo(self, build):
         build.add(self.cos4BtfCubicFitCollated)
         build.addAll(self.cos4BtfCubicFitCollated.tests)
         build.add(self.cos4BtfHighOrderFitCollated)
         build.addAll(self.cos4BtfHighOrderFitCollated.tests)
-
+        build.add(self.cos4CutCellCubicFitCollated)
+        build.addAll(self.cos4CutCellCubicFitCollated.tests)
