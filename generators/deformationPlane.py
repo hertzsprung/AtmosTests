@@ -60,8 +60,6 @@ class DeformationPlane:
                     DeformationPlaneCollated.Test('deformationPlane-uniform-1.5-highOrderFit',   1.5,   meshUniform1_5,   timestep=0.0025),
                     DeformationPlaneCollated.Test('deformationPlane-uniform-1-highOrderFit',     1,     meshUniform1,     timestep=0.002),
                     DeformationPlaneCollated.Test('deformationPlane-uniform-0.75-highOrderFit',  0.75,  meshUniform0_75,  timestep=0.00125),
-                    DeformationPlaneCollated.Test('deformationPlane-uniform-0.5-highOrderFit',   0.5,   meshUniform0_5,   timestep=0.001),
-                    DeformationPlaneCollated.Test('deformationPlane-uniform-0.375-highOrderFit', 0.375, meshUniform0_375, timestep=0.000625)
                 ],
                 controlDict=os.path.join('src/deformationPlane/controlDict.highOrderFit.template'),
                 solverRule='scalarDeformationHighOrderFit')
@@ -90,8 +88,6 @@ class DeformationPlane:
                     DeformationPlaneCollated.Test('deformationPlane-distorted-1.5-highOrderFit',   1.5,   meshDistorted1_5,   timestep=0.0025),
                     DeformationPlaneCollated.Test('deformationPlane-distorted-1-highOrderFit',     1,     meshDistorted1,     timestep=0.002),
                     DeformationPlaneCollated.Test('deformationPlane-distorted-0.75-highOrderFit',  0.75,  meshDistorted0_75,  timestep=0.00125),
-                    DeformationPlaneCollated.Test('deformationPlane-distorted-0.5-highOrderFit',   0.5,   meshDistorted0_5,   timestep=0.001),
-                    DeformationPlaneCollated.Test('deformationPlane-distorted-0.375-highOrderFit', 0.375, meshDistorted0_375, timestep=0.000625)
                 ],
                 controlDict=os.path.join('src/deformationPlane/controlDict.highOrderFit.template'),
                 solverRule='scalarDeformationHighOrderFit')
